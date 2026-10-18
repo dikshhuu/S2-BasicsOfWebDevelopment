@@ -2,53 +2,171 @@
 /*
     Centria Edu - Basics of Web Development
     Modified by: Dikshya Khanal
-    Last modified: 2026-10-18
 */
 
-/* General page styling */
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f5f7fa;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
     line-height: 1.6;
 }
 
-/* Main headings */
-h1,
-h2,
-h3 {
-    color: #234a72;
+/* Navigation bar */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    border-bottom: 1px solid #eeeeee;
+    background: #ffffff;
 }
 
-/* Links */
-a {
-    color: #1769aa;
+.logo {
+    color: #202020;
+    font-size: 28px;
+    font-weight: 700;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+.logo span {
+    color: #e90046;
 }
 
-/* Main content */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+nav {
+    display: flex;
+    gap: 40px;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
+nav a {
+    color: #111111;
+    font-size: 18px;
+    text-decoration: none;
 }
 
-/* Footer */
-footer {
+nav a:hover {
+    color: #e90046;
+}
+
+/* Hero section */
+.hero {
+    padding: 55px 6% 60px;
+    min-height: 480px;
+    background: #ffffff;
+}
+
+.eyebrow {
+    color: #e90046;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    font-size: clamp(42px, 6vw, 96px);
+    line-height: 1.08;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.hero-text {
+    max-width: 740px;
+    color: #555555;
+    font-size: 23px;
+    margin: 30px 0 42px;
+}
+
+.start-button {
+    display: inline-block;
+    padding: 18px 28px;
+    background: #e90046;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.start-button:hover {
+    background: #c9003c;
+}
+
+/* Learning section */
+.learning-section {
+    background: #f7f7f7;
+    padding: 75px 6%;
+}
+
+.learning-section h2,
+.about-section h2 {
+    font-size: 38px;
+    margin-top: 0;
+}
+
+.assignment-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
     margin-top: 30px;
-    padding: 15px;
-    text-align: center;
-    color: #666;
+}
+
+.assignment-list a {
+    display: block;
+    padding: 22px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #202020;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.assignment-list a:hover {
+    color: #e90046;
+    border-color: #e90046;
+}
+
+/* About and footer */
+.about-section {
+    padding: 60px 6%;
+}
+
+footer {
+    padding: 20px 6%;
+    background: #202020;
+    color: #ffffff;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .assignment-list {
+        grid-template-columns: 1fr;
+    }
 }
