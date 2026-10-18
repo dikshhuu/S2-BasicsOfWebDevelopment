@@ -1,11 +1,4 @@
 
-/*
-    Centria Edu - Basics of Web Development
-    Original author: Ville Heikkiniemi
-    Modified by: Dikshya Khanal
-    Last modified: 2026-10-18
-*/
-
 * {
     box-sizing: border-box;
 }
@@ -21,17 +14,15 @@ body {
     line-height: 1.6;
 }
 
-/* Header and navigation */
+/* Header */
 .site-header {
-    width: 100%;
     min-height: 88px;
     padding: 18px 6%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e8e8e8;
-    background-color: #fff;
+    background: #fff;
 }
 
 .logo {
@@ -39,7 +30,6 @@ body {
     font-weight: 700;
     color: #202020;
     text-decoration: none;
-    white-space: nowrap;
 }
 
 .logo span {
@@ -48,8 +38,6 @@ body {
 
 nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 40px;
 }
 
@@ -63,16 +51,14 @@ nav a:hover {
     color: #e90046;
 }
 
-/* Main introduction */
+/* Hero */
 .hero {
-    display: block;
-    width: 100%;
-    min-height: 605px;
+    min-height: 570px;
     padding: 42px 6% 60px;
     background: #fff;
 }
 
-.hero .eyebrow {
+.eyebrow {
     margin: 15px 0 20px;
     color: #e90046;
     font-size: 20px;
@@ -81,16 +67,13 @@ nav a:hover {
 }
 
 .hero h1 {
-    display: block;
     max-width: 900px;
     margin: 20px 0 30px;
     font-size: clamp(48px, 6vw, 96px);
     line-height: 1.08;
-    font-weight: 700;
 }
 
-.hero .hero-text {
-    display: block;
+.hero-text {
     max-width: 740px;
     margin: 30px 0 42px;
     color: #555;
@@ -113,7 +96,7 @@ nav a:hover {
     background: #c9003c;
 }
 
-/* Learning section */
+/* Learning and assignment cards */
 .learning-section {
     padding: 75px 6%;
     background: #f7f7f7;
@@ -134,18 +117,23 @@ nav a:hover {
 .assignment-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: 28px;
     margin-top: 30px;
 }
 
 .assignment-list a {
-    padding: 22px;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    min-height: 98px;
+    padding: 22px 30px;
+    border: 1px solid #e3e3e3;
+    border-radius: 11px;
     background: #fff;
     color: #202020;
+    font-size: 20px;
     font-weight: 700;
     text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
 }
 
 .assignment-list a:hover {
@@ -153,9 +141,10 @@ nav a:hover {
     color: #e90046;
 }
 
-/* About and footer */
+/* About */
 .about-section {
-    padding: 60px 6%;
+    padding: 100px 6% 60px;
+    background: #fff;
 }
 
 footer {
@@ -164,7 +153,7 @@ footer {
     color: #fff;
 }
 
-/* Mobile screens */
+/* Mobile */
 @media (max-width: 650px) {
     .site-header {
         flex-wrap: wrap;
@@ -184,11 +173,16 @@ footer {
         font-size: 48px;
     }
 
-    .hero .hero-text {
+    .hero-text {
         font-size: 18px;
     }
 
     .assignment-list {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .about-section {
+        padding-top: 60px;
     }
 }
