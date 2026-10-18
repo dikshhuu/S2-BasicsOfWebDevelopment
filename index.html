@@ -1,38 +1,80 @@
 
+<!--
+    Centria Edu - Basics of Web Development
+    Original author: Ville Heikkiniemi
+    Modified by: Dikshya Khanal
+    Last modified: 2026-10-18
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Dikshya Khanal">
-    <title>Basics of Web Development</title>
+    <title>Basics of Web Development | Centria Edu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Basics of Web Development</h1>
-        <p>Welcome to my web development learning portfolio!</p>
+    <header class="site-header">
+        <a class="logo" href="index.html">
+            centria <span>edu</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#topics">Topics</a>
+            <a href="#about">About</a>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2>My Assignments</h2>
-            <p>Explore my work in HTML and CSS.</p>
+        <section class="hero">
+            <p class="eyebrow">BASICS OF WEB DEVELOPMENT</p>
 
-            <ul>
-                <li><a href="a1/">Assignment 1</a></li>
-                <li><a href="a2/">Assignment 2</a></li>
-                <li><a href="a3/">Assignment 3</a></li>
-                <li><a href="s2/">Section 2</a></li>
-                <li><a href="s3/">Section 3</a></li>
-                <li><a href="s4/">Section 4</a></li>
-            </ul>
+            <h1>Learn how the web works.</h1>
+
+            <p class="hero-text">
+                Start from HTML and CSS and gradually build modern,
+                responsive and interactive web applications.
+            </p>
+
+            <a class="start-button" href="#topics">
+                Start learning
+            </a>
+        </section>
+
+        <section class="learning-section" id="topics">
+            <h2>What we will learn</h2>
+
+            <p>
+                Explore my web development assignments and practice
+                working with HTML, CSS and responsive web design.
+            </p>
+
+            <div class="assignment-list">
+                <a href="a1/">Assignment 1</a>
+                <a href="a2/">Assignment 2</a>
+                <a href="a3/">Assignment 3</a>
+                <a href="s2/">Section 2</a>
+                <a href="s3/">Section 3</a>
+                <a href="s4/">Section 4</a>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <h2>About this website</h2>
+            <p>
+                This website presents my learning journey in the
+                Centria Edu Basics of Web Development course.
+            </p>
+            <p>Modified by Dikshya Khanal.</p>
         </section>
     </main>
 
     <footer>
-        <p>Created by Dikshya Khanal</p>
+        <p>Basics of Web Development · Dikshya Khanal</p>
     </footer>
 
 </body>
