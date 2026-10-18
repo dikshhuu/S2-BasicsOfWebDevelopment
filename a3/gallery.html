@@ -1,28 +1,83 @@
 
-<!-- Photo card 1 -->
-<article class="card">
-    <h3>A Peaceful Dam</h3>
-    <p>A peaceful view of the water, reeds, and trees.</p>
-    <img
-        src="images/Dam.jpg"
-        alt="Calm water beside reeds, with a green forest in the distance.">
-</article>
+<!--
+    Centria Edu - Basics of Web Development
+    Original author: Ville Heikkiniemi
+    Modified by: Dikshya Khanal
+    Last modified: 2026-10-18
+-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dikshya Khanal">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Centria Edu | My Photo Gallery</title>
+</head>
 
-<!-- Photo card 2 -->
-<article class="card">
-    <h3>A Stack of Balanced Stones</h3>
-    <p>A close view of stone formations beside the water.</p>
-    <img
-        src="images/Stone.JPG"
-        alt="A stack of balanced stones surrounded by rocks and water.">
-</article>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">centria <span>edu</span></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#topics">Photos</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- Photo card 3 -->
-<article class="card">
-    <h3>Annapurna Himalayas</h3>
-    <p>Mountain scenery illuminated by the evening sunlight.</p>
-    <img
-        src="images/Annapurna.jpg"
-        alt="The Annapurna mountain landscape in evening sunlight.">
-</article>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="label">My Photography</span>
+                    <h1>My Photo Gallery</h1>
+                    <p>Explore three photographs from my collection.</p>
+                    <a href="#topics" class="button">View Photos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="topics" id="topics">
+            <div class="container">
+                <h2>My Photographs</h2>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>A Peaceful Dam</h3>
+                        <p>A peaceful view of the water, reeds, and trees.</p>
+                        <img src="images/Dam.jpg"
+                             alt="Calm water reflecting clouds and forested hills.">
+                    </article>
+
+                    <article class="card">
+                        <h3>A Stack of Balanced Stones</h3>
+                        <p>A close view of stone formations beside the water.</p>
+                        <img src="images/Stone.JPG"
+                             alt="Balanced stones surrounded by rocks and water.">
+                    </article>
+
+                    <article class="card">
+                        <h3>Annapurna Himalayas</h3>
+                        <p>Mountain scenery illuminated by evening sunlight.</p>
+                        <img src="images/Annapurna.jpg"
+                             alt="The Annapurna mountain landscape in evening sunlight.">
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Centria Edu</p>
+            <p>Modified by: Dikshya Khanal</p>
+        </div>
+    </footer>
+</body>
+</html>
