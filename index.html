@@ -1,143 +1,152 @@
 
 <!--
     Centria Edu - Basics of Web Development
-
     Original author: Ville Heikkiniemi
     Modified by: Dikshya Khanal
-    Last modified: 2026-09-27
-
-    Based on the original course template.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ville Heikkiniemi">
-
+    <meta name="author" content="Dikshya Khanal">
+    <meta name="description" content="My web development assignments and learning journey.">
+    <title>My Web Development Portfolio | Dikshya Khanal</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-
-    <title>Centria Edu | Basics of Web Development </title>
 </head>
-
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    centria <span>edu</span>
-                </div>
+    <header class="site-header">
+        <a class="logo" href="index.html">dikshhuu <span>web</span></a>
 
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#topics">Topics</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#s-assignments">S Assignments</a>
+            <a href="#a-assignments">A Assignments</a>
+            <a href="#about">About</a>
+        </nav>
     </header>
 
     <main>
+        <section class="hero" id="home">
+            <p class="eyebrow">MY WEB DEVELOPMENT JOURNEY</p>
 
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
+            <h1>Hello, I'm Dikshya Khanal!</h1>
 
-                    <span class="label">Basics of Web Development</span>
+            <p class="hero-text">
+                Welcome to my web development portfolio. Here, you can
+                explore the assignments I have completed while learning
+                HTML, CSS, website design, and responsive layouts.
+            </p>
 
-                    <h1>
-                        Learn how the web works.
-                    </h1>
+            <a class="start-button" href="#s-assignments">
+                Explore my assignments
+            </a>
+        </section>
 
+        <section class="assignment-section" id="s-assignments">
+            <h2>S Assignments</h2>
+            <p class="section-description">
+                These assignments helped me practice web development
+                concepts and improve my HTML and CSS skills.
+            </p>
+
+            <div class="assignment-grid">
+
+                <article class="assignment-card">
+                    <span class="assignment-number">S2</span>
+                    <h3>Basics of Web Development</h3>
                     <p>
-                        Start from HTML and CSS and gradually build modern,
-                        responsive and interactive web applications.
-                        Testing Live Server by Dikshya Khanal.
+                        Practiced the fundamentals of creating web pages
+                        using HTML and organizing page content.
                     </p>
+                    <a href="s2/">Open S2 →</a>
+                </article>
 
-                    <a href="#topics" class="button">
-                        Start learning
-                    </a>
+                <article class="assignment-card">
+                    <span class="assignment-number">S3</span>
+                    <h3>CSS Styling</h3>
+                    <p>
+                        Practiced styling web pages with CSS, including
+                        colors, spacing, and page layout.
+                    </p>
+                    <a href="s3/">Open S3 →</a>
+                </article>
 
-                </div>
+                <article class="assignment-card">
+                    <span class="assignment-number">S4</span>
+                    <h3>Website Development</h3>
+                    <p>
+                        Practiced building website pages and connecting
+                        them with navigation links.
+                    </p>
+                    <a href="s4/">Open S4 →</a>
+                </article>
+
             </div>
         </section>
 
-        <section class="topics" id="topics">
-            <div class="container">
+        <section class="assignment-section alternate-section" id="a-assignments">
+            <h2>A Assignments</h2>
+            <p class="section-description">
+                These assignments allowed me to apply my knowledge
+                through practical website development exercises.
+            </p>
 
-                <h2>What we will learn</h2>
+            <div class="assignment-grid">
 
-                <div class="cards">
+                <article class="assignment-card">
+                    <span class="assignment-number">A1</span>
+                    <h3>Assignment 1</h3>
+                    <p>
+                        Applied the web development concepts learned
+                        in the course to a practical task.
+                    </p>
+                    <a href="a1/">Open A1 →</a>
+                </article>
 
-                    <!-- Original card 1 -->
-                    <article class="card">
-                        <h3>HTML</h3>
-                        <p>
-                            Learn how to structure web pages using semantic HTML.
-                        </p>
-                    </article>
+                <article class="assignment-card">
+                    <span class="assignment-number">A2</span>
+                    <h3>Assignment 2</h3>
+                    <p>
+                        Practiced creating web pages with HTML and CSS
+                        and organizing content into a website.
+                    </p>
+                    <a href="a2/">Open A2 →</a>
+                </article>
 
-                    <!-- Original card 2 -->
-                    <article class="card">
-                        <h3>CSS</h3>
-                        <p>
-                            Learn how to style layouts, colors, typography and
-                            responsive interfaces.
-                        </p>
-                    </article>
+                <article class="assignment-card">
+                    <span class="assignment-number">A3</span>
+                    <h3>Assignment 3</h3>
+                    <p>
+                        Continued developing website structure,
+                        styling, and navigation skills.
+                    </p>
+                    <a href="a3/">Open A3 →</a>
+                </article>
 
-                    <!-- New card 3: Unordered list -->
-                    <article class="card">
-                        <h3>My Web Development Skills</h3>
-
-                        <p>
-                            Here are some tools and technologies
-                            I have learned during this course:
-                        </p>
-
-                        <ul>
-                            <li>Visual Studio Code</li>
-                            <li>HTML and CSS</li>
-                            <li>GitHub Pages</li>
-                            <li>Live Server</li>
-                        </ul>
-                    </article>
-
-                    <!-- New card 4: Ordered list -->
-                    <article class="card">
-                        <h3>My Website Development Process</h3>
-
-                        <p>
-                            These are the steps I follow
-                            when developing a website:
-                        </p>
-
-                        <ol>
-                            <li>Create the HTML structure</li>
-                            <li>Design the page using CSS</li>
-                            <li>Test the website with Live Server</li>
-                            <li>Publish the website using GitHub Pages</li>
-                        </ol>
-                    </article>
-
-                </div>
             </div>
         </section>
 
+        <section class="about-section" id="about">
+            <h2>About Me</h2>
+            <p>
+                I am Dikshya Khanal, and this website showcases my
+                progress in the Centria Edu Basics of Web Development
+                course. I enjoy learning new skills and creating
+                websites with HTML and CSS.
+            </p>
+        </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Centria Edu</p>
-            <p>Modified by: Dikshya Khanal</p>
-        </div>
+        <p>
+            Basics of Web Development · Original author: Ville Heikkiniemi
+        </p>
+        <p>Modified by: Dikshya Khanal</p>
     </footer>
 
 </body>
-
 </html>
