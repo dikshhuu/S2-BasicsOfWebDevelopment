@@ -1,13 +1,7 @@
 
-<!--
-    Centria Edu - Basics of Web Development
-    Original author: Ville Heikkiniemi
-    Modified by: Dikshya Khanal
-    Last modified: 2026-10-18
--->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,29 +12,37 @@
 </head>
 
 <body>
+
     <header>
         <div class="container">
             <nav>
-                <div class="logo">centria <span>edu</span></div>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
                 <ul>
-                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#topics">Topics</a></li>
-                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#topics">Topics</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
                     <span class="label">My Photography</span>
                     <h1>My Photo Gallery</h1>
-                    <p>Explore three photographs from my collection.</p>
-                    <a href="#topics" class="button">View Photos</a>
+                    <p>
+                        Explore three photographs from my collection.
+                        Click any photograph to view its original size.
+                    </p>
+                    <a href="#topics" class="button">
+                        View Photos
+                    </a>
                 </div>
             </div>
         </section>
@@ -49,30 +51,48 @@
             <div class="container">
                 <h2>My Photographs</h2>
 
-                <div class="cards">
-                    <article class="card">
+                <div class="gallery-cards">
+
+                    <article class="card gallery-card">
                         <h3>A Peaceful Dam</h3>
-                        <p>A peaceful view of the water, reeds, and trees.</p>
-                        <img src="images/Dam.jpg"
-                             alt="Calm water reflecting clouds and forested hills.">
+                        <p>
+                            A peaceful view of the water, reeds, and trees.
+                        </p>
+
+                        <a href="images/Dam.jpg">
+                            <img src="images/Dam.jpg"
+                                 alt="Calm water reflecting clouds and forested hills.">
+                        </a>
                     </article>
 
-                    <article class="card">
+                    <article class="card gallery-card">
                         <h3>A Stack of Balanced Stones</h3>
-                        <p>A close view of stone formations beside the water.</p>
-                        <img src="images/Stone.JPG"
-                             alt="Balanced stones surrounded by rocks and water.">
+                        <p>
+                            A close view of stone formations beside the water.
+                        </p>
+
+                        <a href="images/Stone.JPG">
+                            <img src="images/Stone.JPG"
+                                 alt="Balanced stones surrounded by rocks and water.">
+                        </a>
                     </article>
 
-                    <article class="card">
+                    <article class="card gallery-card">
                         <h3>Annapurna Himalayas</h3>
-                        <p>Mountain scenery illuminated by evening sunlight.</p>
-                        <img src="images/Annapurna.jpg"
-                             alt="The Annapurna mountain landscape in evening sunlight.">
+                        <p>
+                            Mountain scenery illuminated by evening sunlight.
+                        </p>
+
+                        <a href="images/Annapurna.jpg">
+                            <img src="images/Annapurna.jpg"
+                                 alt="The Annapurna mountain landscape in evening sunlight.">
+                        </a>
                     </article>
+
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -81,5 +101,6 @@
             <p>Modified by: Dikshya Khanal</p>
         </div>
     </footer>
+
 </body>
 </html>
