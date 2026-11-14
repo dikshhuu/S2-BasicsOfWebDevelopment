@@ -214,6 +214,74 @@ footer {
     filter: grayscale(100%);
 }
 
+/* Navigation menu */
+
+nav a {
+    font-weight: normal;
+}
+
+nav a[aria-current="page"] {
+    font-weight: bold;
+}
+
+/* Contact form */
+
+form.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+form.card label {
+    font-weight: 600;
+}
+
+form.card input:not([type="radio"]),
+form.card select,
+form.card textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+form.card input[type="radio"] {
+    margin-right: 8px;
+}
+
+form.card textarea {
+    resize: vertical;
+}
+
+form.card button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Mobile screen */
+
+@media (max-width: 600px) {
+    form.card {
+        padding: 15px;
+    }
+
+    form.card input,
+    form.card select,
+    form.card textarea {
+        max-width: 100%;
+    }
+}
+
+
 /* S6: Third card - clickable image */
 .card .clickable-image {
     cursor: pointer;
