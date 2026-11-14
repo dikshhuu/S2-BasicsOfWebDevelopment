@@ -173,10 +173,26 @@ footer {
 }
 
 @media (max-width: 700px) {
-    nav ul {
-        display: none;
+    nav {
+        flex-wrap: wrap;
+        padding: 15px 0;
+        gap: 10px;
     }
 
+    nav ul {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+}
     .cards {
         grid-template-columns: 1fr;
     }
@@ -229,10 +245,15 @@ nav a[aria-current="page"] {
 form.card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     max-width: 650px;
     width: 100%;
-    margin: 20px auto;
+    margin: 30px auto;
+    padding: 2rem;
+    background-color: var(--light);
+    border: 1px solid #e5e5e5;
+    border-top: 4px solid var(--primary);
+    border-radius: 8px;
     box-sizing: border-box;
 }
 
@@ -246,7 +267,7 @@ form.card textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     font: inherit;
     box-sizing: border-box;
 }
@@ -261,28 +282,23 @@ form.card textarea {
 
 form.card button {
     padding: 12px 20px;
+    background-color: var(--primary);
+    color: var(--light);
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
 }
 
-/* Mobile screen */
+form.card button:hover {
+    background-color: var(--rose);
+}
+
+/* Mobile contact form */
 
 @media (max-width: 600px) {
     form.card {
-        padding: 15px;
+        padding: 1rem;
     }
-
-    form.card input,
-    form.card select,
-    form.card textarea {
-        max-width: 100%;
-    }
-}
-
-
-/* S6: Third card - clickable image */
-.card .clickable-image {
-    cursor: pointer;
 }
