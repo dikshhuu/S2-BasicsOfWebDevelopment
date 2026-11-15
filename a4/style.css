@@ -426,7 +426,7 @@ footer {
     background-color: var(--beige);
 }
 
-/* Clickable image links */
+/* CLICKABLE IMAGE LINKS */
 
 .photo-image a {
     display: block;
@@ -542,7 +542,7 @@ footer {
     }
 }
 
-/* Gallery mobile layout */
+/* GALLERY MOBILE LAYOUT */
 
 @media (max-width: 700px) {
 
@@ -564,7 +564,7 @@ footer {
     }
 }
 
-/* Small mobile screens */
+/* SMALL MOBILE SCREENS */
 
 @media (max-width: 400px) {
 
