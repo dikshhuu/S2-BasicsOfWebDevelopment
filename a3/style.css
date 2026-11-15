@@ -5,7 +5,10 @@
     Last modified: 2026-11-15
 */
 
-/* Colour palette */
+/* ==================================
+   COLOUR PALETTE
+================================== */
+
 :root {
     --cream: #F8F3EB;
     --beige: #E9DDCE;
@@ -17,7 +20,10 @@
     --muted: #8B7B6D;
 }
 
-/* Basic reset */
+/* ==================================
+   BASIC RESET
+================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +35,8 @@ html {
 }
 
 body {
+    width: 100%;
+    overflow-x: hidden;
     font-family: Georgia, "Times New Roman", serif;
     background-color: var(--cream);
     color: var(--text);
@@ -40,7 +48,10 @@ body {
     margin: 0 auto;
 }
 
-/* Navigation */
+/* ==================================
+   NAVIGATION
+================================== */
+
 header {
     background-color: var(--cream);
     border-bottom: 1px solid var(--beige);
@@ -84,7 +95,10 @@ nav a.active {
     color: var(--terracotta);
 }
 
-/* Hero section */
+/* ==================================
+   HOMEPAGE HERO SECTION
+================================== */
+
 .hero {
     padding: 100px 0;
     min-height: 570px;
@@ -94,9 +108,13 @@ nav a.active {
 
 .hero-layout {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
     align-items: center;
     gap: 3rem;
+}
+
+.hero-content {
+    min-width: 0;
 }
 
 .label {
@@ -115,6 +133,7 @@ nav a.active {
     color: var(--dark-brown);
     margin-bottom: 1.5rem;
     font-weight: normal;
+    overflow-wrap: break-word;
 }
 
 .hero h1 span {
@@ -130,7 +149,10 @@ nav a.active {
     margin-bottom: 2rem;
 }
 
-/* Button */
+/* ==================================
+   BUTTONS
+================================== */
+
 .button {
     display: inline-block;
     padding: 14px 27px;
@@ -149,7 +171,10 @@ nav a.active {
     transform: translateY(-3px);
 }
 
-/* Decorative hero card */
+/* ==================================
+   DECORATIVE HERO CARD
+================================== */
+
 .hero-decoration {
     display: flex;
     justify-content: center;
@@ -188,7 +213,10 @@ nav a.active {
     margin-top: 0.5rem;
 }
 
-/* General sections */
+/* ==================================
+   GENERAL SECTIONS
+================================== */
+
 .section-padding {
     padding: 85px 0;
 }
@@ -207,7 +235,10 @@ nav a.active {
     font-family: Arial, sans-serif;
 }
 
-/* About section */
+/* ==================================
+   ABOUT ME SECTION
+================================== */
+
 .about {
     background-color: var(--beige);
 }
@@ -226,7 +257,10 @@ nav a.active {
     line-height: 1.9;
 }
 
-/* Interests */
+/* ==================================
+   INTERESTS SECTION
+================================== */
+
 .interests {
     background-color: var(--cream);
 }
@@ -267,7 +301,10 @@ nav a.active {
     font-size: 0.9rem;
 }
 
-/* Gallery invitation */
+/* ==================================
+   HOMEPAGE GALLERY INVITATION
+================================== */
+
 .gallery-invite {
     background-color: var(--beige);
     text-align: center;
@@ -283,7 +320,10 @@ nav a.active {
     margin-bottom: 2rem;
 }
 
-/* Footer */
+/* ==================================
+   FOOTER
+================================== */
+
 footer {
     background-color: var(--dark-brown);
     padding: 2.5rem 0;
@@ -313,62 +353,6 @@ footer {
     font-size: 0.75rem !important;
 }
 
-/* Responsive design */
-@media (max-width: 750px) {
-
-    .container {
-        width: 90%;
-    }
-
-    nav {
-        min-height: 75px;
-    }
-
-    nav ul {
-        gap: 1rem;
-    }
-
-    nav a:not(.logo) {
-        font-size: 0.8rem;
-    }
-
-    .hero {
-        padding: 65px 0;
-    }
-
-    .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .hero-decoration {
-        margin-top: 1rem;
-    }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .interest-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-padding {
-        padding: 60px 0;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    nav ul {
-        gap: 0.7rem;
-    }
-    
 /* ==================================
    PHOTOGRAPHY GALLERY
 ================================== */
@@ -414,8 +398,14 @@ footer {
     color: var(--terracotta);
 }
 
+/* ==================================
+   PHOTO GRID
+================================== */
 
-/* Photo cards */
+.photo-section {
+    padding: 30px 0 100px;
+    background-color: var(--cream);
+}
 
 .photo-grid {
     display: grid;
@@ -453,25 +443,38 @@ footer {
     transform: scale(1.04);
 }
 
+/* ==================================
+   PHOTO CAPTIONS
+================================== */
+
 .photo-info {
     padding: 1.2rem 0.3rem;
 }
 
-/* Gallery responsive layout */
-
-@media (max-width: 700px) {
-    .photo-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .photo-image {
-        height: 240px;
-    }
+.photo-number {
+    font-family: Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--terracotta);
 }
 
+.photo-info h2 {
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    font-weight: normal;
+    margin: 0.5rem 0;
+}
 
-/* Gallery ending */
+.photo-info p {
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* ==================================
+   GALLERY ENDING
+================================== */
 
 .gallery-ending {
     background-color: var(--beige);
@@ -486,7 +489,56 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-/* Gallery mobile layout */
+/* ==================================
+   RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 750px) {
+
+    .container {
+        width: 90%;
+    }
+
+    nav {
+        min-height: 75px;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a:not(.logo) {
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-decoration {
+        margin-top: 1rem;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+}
+
+/* Gallery tablet and mobile layout */
 
 @media (max-width: 700px) {
 
@@ -499,13 +551,8 @@ footer {
         gap: 2rem;
     }
 
-    .photo-card:last-child {
-        grid-column: auto;
-        width: 100%;
-    }
-
-    .photo-image img {
-        height: 280px;
+    .photo-image {
+        height: 240px;
     }
 
     .photo-section {
@@ -513,6 +560,17 @@ footer {
     }
 }
 
+/* Small mobile screens */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    nav ul {
+        gap: 0.7rem;
+    }
 
     nav a:not(.logo) {
         font-size: 0.75rem;
