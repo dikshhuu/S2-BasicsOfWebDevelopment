@@ -1,12 +1,8 @@
 
 <!--
-    Centria Edu - Basics of Web Development
-
-    Original author: Ville Heikkiniemi
-    Modified by: Dikshya Khanal
-    Last modified: 2026-09-27
-
-    Based on the original course template.
+    A4 - Creative Personal Portfolio
+    Author: Dikshya Khanal
+    Last modified: 2026-11-15
 -->
 
 <!DOCTYPE html>
@@ -16,129 +12,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Dikshya Khanal">
+    <meta name="description" content="Welcome to Dikshya's personal portfolio, a collection of interests, creativity and photography.">
 
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 
-    <title>Centria Edu | Basics of Web Development </title>
+    <title>Dikshya | Personal Portfolio</title>
 </head>
 
 <body>
 
+    <!-- Website navigation -->
     <header>
         <div class="container">
+
             <nav>
-                <div class="logo">
-                    centria <span>edu</span>
-                </div>
+                <a href="index.html" class="logo">
+                    Dikshya<span>.</span>
+                </a>
 
                 <ul>
-                   <li><a href="index.html">Home</a></li>
-                    <li><a href="#topics">Topics</a></li>
-                     <li><a href="gallery.html">Gallery</a></li>
-                  
+                    <li>
+                        <a href="index.html" class="active">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
+
     <main>
 
+        <!-- Welcome section -->
         <section class="hero">
-            <div class="container">
+
+            <div class="container hero-layout">
+
                 <div class="hero-content">
 
-                    <span class="label">Basics of Web Development</span>
+                    <span class="label">
+                        WELCOME TO MY LITTLE CORNER
+                    </span>
 
                     <h1>
-                        Learn how the web works.
+                        Hello, I'm <span>Dikshya.</span>
+                        <br>
+                        A little bit of creativity,
+                        a lot of curiosity.
                     </h1>
 
                     <p>
-                        Start from HTML and CSS and gradually build modern,
-                        responsive and interactive web applications.
-                        Testing Live Server by Dikshya Khanal.
+                        Welcome to my personal space! This website is
+                        a small collection of the things I enjoy,
+                        moments I capture and experiences that inspire me.
                     </p>
 
-                    <a href="#topics" class="button">
-                        Start learning
+                    <a href="gallery.html" class="button">
+                        Explore my gallery
                     </a>
 
                 </div>
+
+
+                <div class="hero-decoration">
+
+                    <div class="hero-card">
+
+                        <span class="flower">✿</span>
+
+                        <p>
+                            Collecting little moments
+                        </p>
+
+                        <span class="small-note">
+                            One photograph at a time.
+                        </span>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </section>
 
-        <section class="topics" id="topics">
+
+        <!-- About me section -->
+        <section class="about section-padding" id="about">
+
+            <div class="container about-layout">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        A LITTLE INTRODUCTION
+                    </span>
+
+                    <h2>
+                        Getting to know me
+                    </h2>
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <p>
+                        I'm Dikshya, and I enjoy discovering new things,
+                        learning new skills and expressing myself creatively.
+                        I believe that even ordinary days can hold
+                        beautiful moments worth remembering.
+                    </p>
+
+                    <p>
+                        Through this website, I wanted to create
+                        something personal where I could share a little
+                        about myself, my interests and the photographs
+                        I have taken along the way.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- My interests section -->
+        <section class="interests section-padding">
+
             <div class="container">
 
-                <h2>What we will learn</h2>
+                <div class="section-heading">
 
-                <div class="cards">
+                    <span class="label">
+                        THINGS I ENJOY
+                    </span>
 
-                    <!-- Original card 1 -->
-                    <article class="card">
-                        <h3>HTML</h3>
+                    <h2>
+                        A few of my favourite things
+                    </h2>
+
+                    <p>
+                        The little things that make my days more interesting.
+                    </p>
+
+                </div>
+
+
+                <div class="interest-grid">
+
+                    <!-- Photography -->
+                    <article class="interest-card">
+
+                        <span class="interest-icon">📷</span>
+
+                        <h3>
+                            Photography
+                        </h3>
+
                         <p>
-                            Learn how to structure web pages using semantic HTML.
+                            Capturing beautiful places, nature
+                            and everyday moments.
                         </p>
+
                     </article>
 
-                    <!-- Original card 2 -->
-                    <article class="card">
-                        <h3>CSS</h3>
+
+                    <!-- Music -->
+                    <article class="interest-card">
+
+                        <span class="interest-icon">🎵</span>
+
+                        <h3>
+                            Music
+                        </h3>
+
                         <p>
-                            Learn how to style layouts, colors, typography and
-                            responsive interfaces.
+                            Listening to music and enjoying
+                            a good karaoke session.
                         </p>
+
                     </article>
 
-                    <!-- New card 3: Unordered list -->
-                    <article class="card">
-                        <h3>My Web Development Skills</h3>
+
+                    <!-- Cooking -->
+                    <article class="interest-card">
+
+                        <span class="interest-icon">🍳</span>
+
+                        <h3>
+                            Cooking
+                        </h3>
 
                         <p>
-                            Here are some tools and technologies
-                            I have learned during this course:
+                            Exploring recipes and creating
+                            delicious food.
                         </p>
 
-                        <ul>
-                            <li>Visual Studio Code</li>
-                            <li>HTML and CSS</li>
-                            <li>GitHub Pages</li>
-                            <li>Live Server</li>
-                        </ul>
-                    </article>
-
-                    <!-- New card 4: Ordered list -->
-                    <article class="card">
-                        <h3>My Website Development Process</h3>
-
-                        <p>
-                            These are the steps I follow
-                            when developing a website:
-                        </p>
-
-                        <ol>
-                            <li>Create the HTML structure</li>
-                            <li>Design the page using CSS</li>
-                            <li>Test the website with Live Server</li>
-                            <li>Publish the website using GitHub Pages</li>
-                        </ol>
                     </article>
 
                 </div>
+
             </div>
+
+        </section>
+
+
+        <!-- Gallery invitation -->
+        <section class="gallery-invite section-padding">
+
+            <div class="container invite-content">
+
+                <span class="label">
+                    MEMORIES IN PICTURES
+                </span>
+
+                <h2>
+                    Every picture tells a little story.
+                </h2>
+
+                <p>
+                    Explore my collection of photographs
+                    and discover some of the moments I wanted to remember.
+                </p>
+
+                <a href="gallery.html" class="button">
+                    Visit my gallery
+                </a>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- Website footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Centria Edu</p>
-            <p>Modified by: Dikshya Khanal</p>
+
+        <div class="container footer-content">
+
+            <a href="index.html" class="logo footer-logo">
+                Dikshya<span>.</span>
+            </a>
+
+            <p>
+                Made with care by Dikshya Khanal.
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Dikshya. All rights reserved.
+            </p>
+
         </div>
+
     </footer>
 
 </body>
-
 </html>
