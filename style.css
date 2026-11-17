@@ -5,38 +5,52 @@
     Modified by: Dikshya Khanal
 */
 
+/* Global styles */
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 25px;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #202020;
-    line-height: 1.6;
+    color: #292329;
+    line-height: 1.7;
+    background: #ffffff;
+}
+
+a {
+    transition: color 0.25s ease, background 0.25s ease;
+}
+
+a:focus-visible {
+    outline: 3px solid #e90046;
+    outline-offset: 4px;
 }
 
 /* Header */
 .site-header {
-    min-height: 88px;
-    padding: 18px 6%;
+    min-height: 85px;
+    padding: 18px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    border-bottom: 1px solid #e8e8e8;
-    background: #fff;
+    gap: 25px;
+    border-bottom: 1px solid #f0e5e9;
+    background: #ffffff;
+    position: relative;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: #202020;
+    font-size: 29px;
+    font-weight: 800;
+    color: #292329;
     text-decoration: none;
+    letter-spacing: -1px;
 }
 
 .logo span {
@@ -46,12 +60,13 @@ body {
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
 }
 
 nav a {
-    color: #111;
-    font-size: 16px;
+    color: #393139;
+    font-size: 15px;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -59,177 +74,224 @@ nav a:hover {
     color: #e90046;
 }
 
-/* Hero */
+/* Hero section */
 .hero {
-    padding: 70px 6% 80px;
-    background: #fff4f7;
+    padding: 100px 7% 110px;
+    background: linear-gradient(135deg, #fff1f5, #fff9fb);
 }
 
 .eyebrow {
-    margin: 15px 0 20px;
+    margin: 0 0 20px;
     color: #e90046;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
 }
 
 .hero h1 {
     max-width: 900px;
-    margin: 20px 0 30px;
+    margin: 15px 0 25px;
     font-size: clamp(42px, 6vw, 76px);
-    line-height: 1.1;
+    line-height: 1.15;
+    letter-spacing: -2px;
 }
 
 .hero-text {
-    max-width: 740px;
-    margin: 30px 0 42px;
-    color: #555;
-    font-size: 20px;
-    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 0 35px;
+    color: #655b61;
+    font-size: 19px;
+    line-height: 1.8;
 }
 
+/* Main button */
 .start-button {
     display: inline-block;
-    padding: 15px 26px;
+    padding: 15px 28px;
+    border: 2px solid #e90046;
     border-radius: 8px;
     background: #e90046;
-    color: #fff;
-    font-size: 17px;
+    color: #ffffff;
+    font-size: 16px;
     font-weight: 700;
     text-decoration: none;
+    transition: all 0.25s ease;
 }
 
 .start-button:hover {
     background: #c9003c;
+    border-color: #c9003c;
+    transform: translateY(-3px);
 }
 
 /* Assignment sections */
 .assignment-section {
-    padding: 65px 6%;
-    background: #f7f7f7;
+    padding: 80px 7%;
+    background: #faf8f9;
 }
 
 .assignment-section h2,
 .about-section h2 {
-    margin: 0 0 15px;
+    margin: 0 0 12px;
     font-size: 36px;
     line-height: 1.3;
+    letter-spacing: -0.7px;
 }
 
-.section-description,
-.about-section p {
+.section-description {
     max-width: 750px;
-    color: #555;
-    font-size: 18px;
+    margin: 0;
+    color: #71666d;
+    font-size: 17px;
 }
 
-/* Responsive CSS Grid */
+/* Assignment grid */
 .assignment-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-/* Individual assignment cards */
+/* Assignment cards */
 .assignment-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
-    padding: 25px;
-    border: 1px solid #e3e3e3;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s, border-color 0.2s;
+    min-height: 250px;
+    padding: 28px;
+    border: 1px solid #eee3e8;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 5px 18px rgba(65, 30, 45, 0.05);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
 }
 
 .assignment-card:hover {
-    transform: translateY(-4px);
-    border-color: #e90046;
+    transform: translateY(-6px);
+    border-color: #f2a5bd;
+    box-shadow: 0 12px 28px rgba(65, 30, 45, 0.10);
 }
 
+/* Assignment number */
 .assignment-number {
     display: inline-block;
-    padding: 5px 13px;
-    border-radius: 20px;
-    background: #ffe1ea;
+    padding: 5px 15px;
+    border-radius: 30px;
+    background: #ffe5ed;
     color: #c9003c;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
 }
 
+/* Card heading */
 .assignment-card h3 {
-    margin: 16px 0 10px;
-    font-size: 21px;
+    margin: 18px 0 10px;
+    color: #30252b;
+    font-size: 20px;
     line-height: 1.4;
 }
 
+/* Card description */
 .assignment-card p {
-    margin: 0 0 18px;
-    color: #555;
-    font-size: 16px;
+    margin: 0 0 20px;
+    color: #71666d;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
-/* Keep links at the bottom of each card */
+/* Card links */
 .assignment-card a {
     margin-top: auto;
     padding-top: 10px;
     color: #e90046;
+    font-size: 15px;
     font-weight: 700;
     text-decoration: none;
 }
 
 .assignment-card a:hover {
-    color: #c9003c;
+    color: #a90032;
     text-decoration: underline;
 }
 
-/* Different background for A assignments */
+/* A assignments background */
 .alternate-section {
-    background: #fff;
+    background: #ffffff;
 }
 
-/* About */
+/* About section */
 .about-section {
-    padding: 70px 6%;
-    background: #f7f7f7;
+    padding: 80px 7%;
+    background: #fff1f5;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 15px 0 0;
+    color: #655b61;
+    font-size: 17px;
+    line-height: 1.9;
 }
 
 /* Footer */
 footer {
-    padding: 25px 6%;
-    background: #202020;
-    color: #fff;
+    padding: 30px 7%;
+    background: #292329;
+    color: #ffffff;
     text-align: center;
 }
 
 footer p {
     margin: 5px 0;
-    font-size: 15px;
+    color: #e8dfe3;
+    font-size: 14px;
 }
 
-/* Tablet: two cards per row */
+/* Tablet layout */
 @media (max-width: 900px) {
+
+    .site-header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
     .assignment-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .site-header {
-        align-items: flex-start;
+    .hero,
+    .assignment-section,
+    .about-section {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
-/* Mobile: one card per row */
+/* Mobile layout */
 @media (max-width: 600px) {
+
     .site-header {
         flex-direction: column;
-        gap: 12px;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 18px 6%;
+    }
+
+    .logo {
+        font-size: 26px;
     }
 
     nav {
-        gap: 14px;
+        width: 100%;
+        gap: 12px 20px;
     }
 
     nav a {
@@ -237,20 +299,31 @@ footer p {
     }
 
     .hero {
-        padding: 45px 6% 55px;
+        padding: 60px 6% 70px;
+    }
+
+    .eyebrow {
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 
     .hero h1 {
         font-size: 42px;
+        letter-spacing: -1px;
     }
 
     .hero-text {
-        font-size: 18px;
+        font-size: 17px;
+    }
+
+    .start-button {
+        padding: 13px 20px;
+        font-size: 15px;
     }
 
     .assignment-section,
     .about-section {
-        padding: 45px 6%;
+        padding: 55px 6%;
     }
 
     .assignment-section h2,
@@ -258,8 +331,55 @@ footer p {
         font-size: 30px;
     }
 
+    .section-description,
+    .about-section p {
+        font-size: 16px;
+    }
+
     .assignment-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .assignment-card {
+        min-height: 220px;
+        padding: 24px;
+    }
+
+    footer {
+        padding: 25px 6%;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 360px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }
